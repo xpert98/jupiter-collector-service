@@ -1,1 +1,1 @@
-# jupiterCollectorService
+# jupiter-collector-service
