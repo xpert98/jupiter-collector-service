@@ -21,7 +21,7 @@ let inventorySchema = new Schema({
     deploymentEnvUrl: {type: String, required: false},
     riskLevel: {type: String, required: false},
     regulations: {type: String, required: false},
-    slackChannel: {type: String, required: false},
+    chatChannel: {type: String, required: false},
     agileScrumBoardUrl: {type: String, required: false},
     buildServerUrl: {type: String, required: false},
     age: {type: Number, required: false},

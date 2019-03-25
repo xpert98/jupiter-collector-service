@@ -6,7 +6,28 @@ exports.inventoryItemCreate = function (req, res) {
         {
             collectorInstanceId: process.env.INSTANCE_ID,
             commonName: req.body.commonName,
+            aliases: req.body.aliases,
+            description: req.body.description,
+            codeRepoUrl: req.body.codeRepoUrl,
+            binaryRepoUrl: req.body.binaryRepoUrl,
+            primaryLanguage: req.body.primaryLanguage,
+            secondaryLanguages: req.body.secondaryLanguages,
+            type: req.body.type,
             primaryOwner: req.body.primaryOwner,
+            secondaryOwners: req.body.secondaryOwners,
+            businessUnit: req.body.businessUnit,
+            exposure: req.body.exposure,
+            numUsers: req.body.numUsers,
+            dataClassification: req.body.dataClassification,
+            deploymentEnv: req.body.deploymentEnv,
+            deploymentEnvUrl: req.body.deploymentEnvUrl,
+            riskLevel: req.body.riskLevel,
+            regulations: req.body.regulations,
+            chatChannel: req.body.chatChannel,
+            agileScrumBoardUrl: req.body.agileScrumBoardUrl,
+            buildServerUrl: req.body.buildServerUrl,
+            age: req.body.age,
+            lifecycleStage: req.body.lifecycleStage,
             lastDeployDate: Date.now()
         }
     );
