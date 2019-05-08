@@ -42,14 +42,13 @@ exports.inventoryItemCreate = function (req, res) {
 
 exports.inventoryAllItems = function(req, res) {
     InventoryItem.find({}, function(err, inventoryItems) {
-        var appList = {};
-
-        inventoryItems.forEach(function(inventoryItem){
-            appList[inventoryItem.commonName] = inventoryItem;
-        });
-
-        res.send(appList)
+        res.send(inventoryItems);
     });
+};
+
+exports.inventoryCollectorDetails = function(req, res) {
+    var collectorDetails = {"instanceId":process.env.INSTANCE_ID};
+    res.send(collectorDetails);
 };
 
 exports.inventoryItemDetails = function (req, res) {

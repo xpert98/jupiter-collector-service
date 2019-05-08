@@ -29,6 +29,8 @@ router.use((req, res, next) =>{
 
 var inventoryItemController = require('../controllers/inventoryItemController');
 
+router.get('/', inventoryItemController.inventoryCollectorDetails);
+
 router.post('/create', inventoryItemController.inventoryItemCreate);
 
 router.get('/list', inventoryItemController.inventoryAllItems);
