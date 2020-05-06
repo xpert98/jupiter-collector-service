@@ -4,7 +4,6 @@ var express = require('express');
 var cors = require('cors');
 var bodyParser = require('body-parser');
 var app = express();
-var db = require('./db');
 
 var inventoryItem = require('./routes/inventoryItemRoute');
 

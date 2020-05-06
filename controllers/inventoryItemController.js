@@ -1,10 +1,21 @@
+const fs = require('fs');
+var db = require('../db');
 var InventoryItem = require('../models/inventoryItemModel');
 
 exports.inventoryItemCreate = function (req, res) {
 
+    let collectorInstanceId = '';
+
+    if (!process.env.INSTANCE_ID) {
+        collectorInstanceId = fs.readFileSync(process.env.INSTANCE_ID_FILE);
+    }
+    else {
+        collectorInstanceId = process.env.INSTANCE_ID;
+    }
+
     let inventoryItem = new InventoryItem(
         {
-            collectorInstanceId: process.env.INSTANCE_ID,
+            collectorInstanceId: collectorInstanceId,
             commonName: req.body.commonName,
             aliases: req.body.aliases,
             description: req.body.description,
@@ -47,7 +58,7 @@ exports.inventoryAllItems = function(req, res) {
 };
 
 exports.inventoryCollectorDetails = function(req, res) {
-    var collectorDetails = {"instanceId":process.env.INSTANCE_ID};
+    var collectorDetails = {"instanceId":collectorInstanceId};
     res.send(collectorDetails);
 };
 
