@@ -3,11 +3,20 @@ The Jupiter Collector Service provides data management functionality for invento
 
 The Collector Service provides CRUD operations and uses MongoDB for data storage.
 
-## Prerequisites
+## Deployment
+
+### Production Environment
+
+Docker Swarm is recommended for production deployment.  
+
+Additional Docker Swarm deployment resources here: https://github.com/xpert98/jupiter-docker
+
+### Development Environment
+#### Prerequisites
 * Node.js 11.9.0 or greater
 * MongoDB 4.0.8 or greater
 
-## Running the Collector Service
+#### Running the Collector Service
 First, set environment variables or create a .env file (in the root directory alongside server.js) for the following:
 
 * MONGO_HOST
