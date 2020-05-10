@@ -15,6 +15,7 @@ Additional Docker Swarm deployment resources here: https://github.com/xpert98/ju
 #### Prerequisites
 * Node.js 11.9.0 or greater
 * MongoDB 4.0.8 or greater
+  * A database and user account should be created prior to running the Collector Service
 
 #### Running the Collector Service
 First, set environment variables or create a .env file (in the root directory alongside server.js) for the following:
